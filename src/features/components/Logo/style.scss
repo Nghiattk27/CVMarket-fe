@@ -1,0 +1,25 @@
+.Logo {
+  .redBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background: #e82c2c;
+    margin-right: 3px;
+    border: 2px solid #0000007d;
+    box-shadow: 1px 1px 0px #0000007d;
+    border-radius: 10px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+    font-size: 25px;
+  }
+
+  .marketBox {
+    color: #fff !important;
+    -webkit-text-stroke: 1px black;
+    text-stroke: 1px black;
+    font-size: 27px;
+  }
+}
