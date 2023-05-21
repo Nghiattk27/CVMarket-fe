@@ -12,6 +12,19 @@ import {
 import logo from "../../../images/logossss.png";
 import "../../../scss/Home/Menu.scss";
 export default function Mn(props) {
+  const [currentUrl, setCurrentUrl] = useState(window.location.href);
+
+  useEffect(() => {
+    const handleUrlChange = () => {
+      setCurrentUrl(window.location.href);
+    };
+
+    window.addEventListener("popstate", handleUrlChange); // Lắng nghe sự kiện browser back/forward
+    return () => {
+      window.removeEventListener("popstate", handleUrlChange); // Hủy lắng nghe khi component bị unmount
+    };
+  }, []);
+
   const okok = (bar_ref, nav_ref, line_ref) => {
     setTimeout(() => {
       lineSlide();

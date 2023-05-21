@@ -27,7 +27,7 @@ export default function ListCategories() {
           </div>
           <div className="heading__hr"></div>
         </div>
-        <div className="row">
+        <div className="row mt-4">
           {loading ? (
             <SpinLoad />
           ) : (

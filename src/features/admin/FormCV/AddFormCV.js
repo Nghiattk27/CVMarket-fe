@@ -101,12 +101,12 @@ export default function AddFormCV() {
           }
           await tagFormCVApi.posttagFormCV(data);
           await dispatch(
-            updateformCV({ avatar: anh, content: content, id: id }),
+            updateformCV({ avatar: anh, content: content, id: id })
           );
         }
       } else {
         if (checkArrayEquar(tagId, tag1)) {
-          dispatch(updateformCV({ content: content, id: id ,name:nameCV}));
+          dispatch(updateformCV({ content: content, id: id, name: nameCV }));
         } else {
           await tagFormCVApi.deletetagFormCV(id);
           var data = [];
@@ -120,10 +120,10 @@ export default function AddFormCV() {
         }
       }
     } else {
-      await storage.ref(`imagesFormCV/${img.name}`).put(img);
+      await storage.ref(`imagesFormCV/${img?.name}`).put(img);
       const anh = await storage
         .ref("imagesFormCV")
-        .child(img.name)
+        .child(img?.name)
         .getDownloadURL();
       var tagFormCV = [];
       for (let i = 0; i < tagId.length; i++) {
@@ -132,11 +132,11 @@ export default function AddFormCV() {
       dispatch(
         addformCV({
           content: content,
-          name:nameCV,
+          name: nameCV,
           avatar: anh,
           status: 0,
           tagform: tagFormCV,
-        }),
+        })
       );
     }
     setTimeout(() => {

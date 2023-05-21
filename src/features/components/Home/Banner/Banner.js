@@ -23,11 +23,11 @@ export default function Banner() {
             <div className="banner__search--box--title">
               <h4 className="text-center">Công việc của bạn</h4>
               <p>
-                Chào mừng đến với trang web của chúng tôi, tại đây bạn có thể
-                tạo CV cho bản thân, tìm kiếm việc làm phù hơp, tham khảo các
-                công ty, doanh nghiệp, hay cập nhật những tin tức mới nhất về
-                thị trường việc làm. Đây cũng làm nơi các nhà tuyển dụng có thể
-                tìm thấy các ứng viên thích hợp cho doanh nghiệp của mình
+                Chào mừng đến với trang web việc làm của chúng tôi, tại đây bạn
+                có thể tạo CV cho bản thân, tìm kiếm việc làm phù hơp, tham khảo
+                các công ty, doanh nghiệp, hay cập nhật những tin tức mới nhất
+                về thị trường việc làm. Đây cũng làm nơi các nhà tuyển dụng có
+                thể tìm thấy các ứng viên thích hợp cho doanh nghiệp của mình
               </p>
             </div>
             <div className="banner__search--box--content">
