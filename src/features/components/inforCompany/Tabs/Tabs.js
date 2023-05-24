@@ -45,7 +45,7 @@ export default function Tab({ id }) {
         <TabPane tab="Đăng tuyển việc" key="2">
           <AddJob id={id} idEdit={idEdit} onChangeTabs={handleOnChaneTabs} />
         </TabPane>
-        <TabPane tab="Các ứng viêc ứng tuyển" key="3">
+        <TabPane tab="Các ứng viên ứng tuyển" key="3">
           <UserApply id={id} />
         </TabPane>
         <TabPane tab="Thông tin công ty" key="4">

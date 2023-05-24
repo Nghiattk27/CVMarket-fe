@@ -8,7 +8,7 @@ import moment from "moment";
 import sendMailApi from "../../../../../api/sendMail";
 export default function UserApply({ id }) {
   const [data, setData] = useState();
-  console.log("data", data);
+  console.log("id", id);
   const [numReload, setNumReload] = useState(1);
   const [state, setState] = useState({
     isModalUserVisible: false,
@@ -160,7 +160,7 @@ export default function UserApply({ id }) {
                                     <td className="td">Lịch phỏng vấn</td>
                                     <td>
                                       {moment(oki.WorkApplies.sechedule).format(
-                                        "DD/MM/yyyy",
+                                        "DD/MM/yyyy"
                                       )}
                                     </td>
                                   </tr>
@@ -186,7 +186,7 @@ export default function UserApply({ id }) {
                                       oki.name,
                                       oki.email,
                                       oki.id,
-                                      ok.id,
+                                      ok.id
                                     )
                                   }
                                 >
@@ -208,7 +208,7 @@ export default function UserApply({ id }) {
                                     className="form-control input-ant"
                                     value={moment(
                                       date ?? new Date(),
-                                      "YYYY-MM-DD",
+                                      "YYYY-MM-DD"
                                     )}
                                   />
                                 </Space>

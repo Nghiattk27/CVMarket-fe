@@ -1,17 +1,22 @@
 .contact {
-  padding: 6rem 5rem;
-  background: url("../../images/cup-of-coffee-1280537.jpg") repeat center;
+  padding: 4rem 5rem;
+  background: url("../../images/contact.png") no-repeat center;
   background-size: cover;
+  width: 100%;
   color: white;
   &__title {
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px white;
+    h3 {
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-weight: 700;
+      font-size: 30px;
+      // text-shadow: 1px 1px 3px #f83333;
+      color: #f83333 !important;
+    }
   }
   &__detail {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgb(122, 122, 122);
   }
   &__gmail {
     position: relative;
@@ -25,20 +30,31 @@
       color: black;
     }
     button {
-      position: absolute;
+      position: relative;
       left: 0;
-      bottom: -40%;
+      // bottom: -40%;
+      // width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 25px;
+      }
       outline: none;
-      border: none;
+      background: #fff;
+      border: 1px solid #2e2e2e;
       padding: 0.5rem 1.5rem;
       border-radius: 4px;
-      background-color: #ff4948;
+      // background-color: #ff4948;
       font-weight: 400;
       font-size: 1.2rem;
-      color: white;
+      a {
+        color: #2e2e2e;
+      }
       transition: 0.5s;
       &:hover {
-        background-color: #f83333;
+        box-shadow: 5px 5px #2e2e2e;
+        // background-color: #f83333;
       }
     }
   }
