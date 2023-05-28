@@ -1,5 +1,31 @@
 .CvHome {
-  padding: 6rem 5rem;
+  .btnCV {
+    a {
+      color: #212121 !important;
+    }
+    padding: 5px 25px;
+    border: 1px solid #929090;
+    background: #fff;
+    font-size: 18px;
+    // font-weight: 500;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    img {
+      width: 35px;
+      margin-right: 20px;
+    }
+    &:hover {
+      // background: #f83333;
+      box-shadow: 3px 3px #444343;
+    }
+  }
+
+  // .bigBox {
+  //   background-image: url("../../images/bg.jpg");
+  // }
+
+  padding: 6rem 15rem;
   background: url("../../images/Credit-analis.jpg") no-repeat center;
   background-size: cover;
   &__title {
@@ -7,21 +33,23 @@
     letter-spacing: 0.1rem;
     font-weight: bold;
     h3 {
-      color: rgba(255, 255, 255, 0.8);
+      color: #f92f2f;
+      font-weight: 700;
     }
   }
   &__detail {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: #4d4d4d;
   }
   &__button {
     .btnCV {
+      position: relative !important;
       outline: none;
       border: none;
       padding: 0.7rem 2rem;
       border-radius: 5px;
       font-weight: 400;
-      color: white;
+      color: #000;
       transition: 0.5s;
       box-sizing: border-box;
     }
@@ -50,9 +78,9 @@
   .CvHome {
     padding: 6rem 3rem;
     &__button {
-      text-align: center;
+      // text-align: center;
       .createCv {
-        margin: 0 0 0.5rem 0;
+        // margin: 0 0 0.5rem 0;
       }
     }
   }

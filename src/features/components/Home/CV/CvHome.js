@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../../scss/Home/CvHome.scss";
+import cv from "../../../images/cv.jpg";
 export default function CvHome() {
   return (
     <div className="CvHome">
-      <div className="bg-white">
+      <div className="bg-white d-flex flex-column justify-content-center align-items-center p-3 rounded bigBox">
         <div className="CvHome__title">
           <h3>Tạo CV để bắt đầu ứng tuyển</h3>
         </div>
@@ -14,14 +15,17 @@ export default function CvHome() {
             cv thật đẹp.
           </p>
         </div>
-        <div className="CvHome__button">
-          <Link className="btnCV createCv" to="/createcv">
+        <button className="btnCV rounded mt-3">
+          <img src={cv}></img>
+          <Link className="createCv" to="/createcv">
             Tạo CV
           </Link>
-          <Link to="/jobs" className="btnCV searchCv">
+        </button>
+        {/* <button className="ms-5 btnCV">
+          <Link to="/jobs" className="searchCv">
             Tìm việc ngay
           </Link>
-        </div>
+        </button> */}
       </div>
     </div>
   );

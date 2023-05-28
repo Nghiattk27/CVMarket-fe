@@ -6,6 +6,7 @@ import "../../scss/Login/Login.scss";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import loginApi from "../../../api/loginApi";
+import loginBg from "../../images/loginBg.png";
 export default function Login({ onLogin }) {
   const schema = yup.object().shape({
     userName: yup.string().email().required(),
@@ -25,7 +26,6 @@ export default function Login({ onLogin }) {
         email: data.userName,
         password: data.password,
         status: 1,
- 
       })
       .then((ok) => {
         if (ok === "err") {
@@ -84,9 +84,10 @@ export default function Login({ onLogin }) {
         </div>
         <div className="login__box__right">
           <div className="right">
-            <div className="login__box__right__text">Hoặc đăng nhập với</div>
+            <img src={loginBg}></img>
+            {/* <div className="login__box__right__text">Hoặc đăng nhập với</div>
             <button className="fb">Đăng nhập với facebook</button>
-            <button className="in">Đăng nhập với instagram</button>
+            <button className="in">Đăng nhập với instagram</button> */}
             <div className="login__box__right__text">
               Chưa có tài khoản? <Link to="/register">Đăng ký</Link> ở đây
             </div>

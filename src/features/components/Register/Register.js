@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../../scss/Register/Register.scss";
 import RegisterCompany from "./RegisterCompany";
 import RegisterUser from "./RegisterUser";
+import loginBg from "../../images/loginBg.png";
 export default function Register() {
   const UserEl = createRef();
   const CompanyEl = createRef();
@@ -51,9 +52,10 @@ export default function Register() {
         </div>
         <div className="register__box__right">
           <div className="right">
-            <div className="register__box__right__text">Hoặc đăng nhập với</div>
+            <img src={loginBg}></img>
+            {/* <div className="register__box__right__text">Hoặc đăng nhập với</div>
             <button className="fb">Đăng nhập với facebook</button>
-            <button className="in">Đăng nhập với instagram</button>
+            <button className="in">Đăng nhập với instagram</button> */}
             <div className="register__box__right__text">
               Bạn đã có tài khoản? <Link to="/login">Đăng nhập</Link> ở đây
             </div>
