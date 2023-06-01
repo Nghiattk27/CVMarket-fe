@@ -35,6 +35,8 @@ export default function ListCandidates() {
     // setDataRender(users);
   }, [page]);
 
+  console.log(page);
+
   const handldeSearch = (e) => {
     if (e.target.value === "") {
       setDataRender(users.rows);
@@ -64,6 +66,7 @@ export default function ListCandidates() {
       setDataRender(dataview);
     }
   };
+  console.log(dataRender);
 
   return (
     <div className="listCandidates">
@@ -127,7 +130,14 @@ export default function ListCandidates() {
           <SpinLoad />
         ) : (
           <div className="pagination">
-            <Pagination defaultCurrent={page} total={users.count} />
+            <Pagination
+              defaultCurrent={page}
+              onChange={(e) => {
+                setState({ page: e });
+                console.log(e);
+              }}
+              total={users?.count}
+            />
           </div>
         )}
       </div>
